@@ -2,20 +2,17 @@
 <html lang="en" style="height:100%;">
   <head>
     <meta charset="utf-8">
-    <title>WebVM - Linux virtualization in WebAssembly</title>
+    <title>ZapVM</title>
 
-    <meta name="description" content="Server-less virtual machine, networking included, running browser-side in HTML5/WebAssembly. Code in any programming language inside this Linux terminal.">
-    <meta name="keywords" content="WebVM, Virtual Machine, CheerpX, x86 virtualization, WebAssembly, Tailscale, JIT">
-    <meta property="og:title" content="WebVM - Linux virtualization in WebAssembly" />
+    <meta name="description" content="Serverless Oracle Protocol.">
+    <meta name="keywords" content="ZapVM>
+    <meta property="og:title" content="ZapVM - Linux virtualization in WebAssembly" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="WebVM"/>
+    <meta property="og:site_name" content="ZapVM"/>
     <meta property="og:url" content="/">
-    <meta property="og:image" content="https://webvm.io/assets/welcome_to_WebVM_.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@leaningtech" />
-    <meta name="twitter:title" content="WebVM - Linux virtualization in WebAssembly" />
     <meta name="twitter:description" content="Server-less virtual machine, networking included, running browser-side in HTML5/WebAssembly. Code in any programming language inside this Linux terminal.">
-    <meta name="twitter:image" content="https://webvm.io/assets/welcome_to_WebVM_.png" />
 
     <!-- Apple iOS web clip compatibility tags -->
     <meta name="application-name" content="WebVM" />
@@ -49,7 +46,7 @@
         const loginUrlCb = (url) => {
             loginElem.href = url;
             loginElem.target = "_blank";
-            statusElem.innerHTML = "Tailscale Login";
+            statusElem.innerHTML = "Login";
             resolveLogin(url);
         };
         const stateUpdateCb = (state) => {
@@ -154,54 +151,26 @@
 		getAsciiTitle: function ()
 		{
 			var title = [
-				color + "                        __      __   _  __   ____  __       " + normal,
-				color + "                        \\ \\    / /__| |_\\ \\ / /  \\/  | " + normal,
-				color + "                         \\ \\/\\/ / -_) '_ \\ V /| |\\/| | " + normal,
-				color + "                          \\_/\\_/\\___|_.__/\\_/ |_|  |_|  " + normal,
+				color + "                        _________    ___  _____   __  " + normal,
+				color + "                        \\ \\___/    |  | | |_\\ // | " + normal,
+				color + "                      ___\\ \\        \\ V /| |\\/| | " + normal,
+				color + "                     /_____\\_/        \\_/ |_|  |__| " + normal,
 
 			];
 			return title;
 		},
 		getAsciiText: function ()
 		{
-			var text = [
-				"+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+",
-				"|                                                                             |",
-				"| WebVM is a server-less virtual Linux environment running fully client-side  |",
-				"| in HTML5/WebAssembly.                                                       |",
-				"|                                                                             |",
-				"| WebVM is powered by the CheerpX virtualization engine, which enables safe,  |",
-				"| sandboxed client-side execution of x86 binaries on any browser.             |",
-				"|                                                                             |",
-				"| CheerpX includes an x86-to-WebAssembly JIT compiler, a virtual block-based  |",
-				"| file system, and a Linux syscall emulator.                                  |",
-				"|                                                                             |",
-				"| [NEW!] WebVM now supports full TCP and UDP networking via Tailscale!        |",
-				"| Click on 'Tailscale Login' to enable it. Read the announcement:             |",
-				"|                                                                             |",
-				"| " + underline + "https://leaningtech.com/webvm-virtual-machine-with-networking-via-tailscale" + normal +" |",
-				"|                                                                             |",
-				"+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+",
-				"",
-				"   Welcome to WebVM (build CX_VERSION). If unsure, try these examples:",
-				"",
-				"     python3 examples/python3/fibonacci.py ",
-				"     gcc -o helloworld examples/c/helloworld.c && ./helloworld",
-				"     objdump -d ./helloworld | less -M",
-				"     vim examples/c/helloworld.c",
-				"     curl --max-time 15 parrot.live  # requires networking",
-				"",
-				];
-			return text;
+				
 		},
 		getSharedArrayBufferMissingMessage: function ()
 		{
 			const text = [
 				"",
 				"",
-				color + "CheerpX could not start" + normal,
+				color + "ZVM could not start" + normal,
 				"",
-				"CheerpX depends on JavaScript's SharedArrayBuffer, that your browser",
+				"ZVM depends on JavaScript's SharedArrayBuffer, that your browser",
 				"     does not support.",
 				"",
 				"SharedArrayBuffer is currently enabled by default on recent",
