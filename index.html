@@ -108,7 +108,7 @@
     </script>
   </head>
 
-  <body style="margin:0;height:100%;background:black;color:white;overflow:hidden; display:flex; flex-direction: column; justify-content: space-between; height: 100%;">
+  <body style="margin:0;height:100%;background:#258eff;color:yellow;overflow:hidden; display:flex; flex-direction: column; justify-content: space-between; height: 100%;">
 
     <header style="flex-grow:0; flex-srink: 0;height:80px; width: 100%; margin: 2px 0 2px 0;">
       <div style="display: flex; flex-direction: row; justify-content: space-between; width: 100%;">
@@ -164,34 +164,7 @@
 		},
 		getAsciiText: function ()
 		{
-			var text = [
-				"+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+",
-				"|                                                                             |",
-				"| WebVM is a server-less virtual Linux environment running fully client-side  |",
-				"| in HTML5/WebAssembly.                                                       |",
-				"|                                                                             |",
-				"| WebVM is powered by the CheerpX virtualization engine, which enables safe,  |",
-				"| sandboxed client-side execution of x86 binaries on any browser.             |",
-				"|                                                                             |",
-				"| CheerpX includes an x86-to-WebAssembly JIT compiler, a virtual block-based  |",
-				"| file system, and a Linux syscall emulator.                                  |",
-				"|                                                                             |",
-				"| [NEW!] WebVM now supports full TCP and UDP networking via Tailscale!        |",
-				"| Click on 'Tailscale Login' to enable it. Read the announcement:             |",
-				"|                                                                             |",
-				"| " + underline + "https://leaningtech.com/webvm-virtual-machine-with-networking-via-tailscale" + normal +" |",
-				"|                                                                             |",
-				"+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+",
-				"",
-				"   Welcome to WebVM (build CX_VERSION). If unsure, try these examples:",
-				"",
-				"     python3 examples/python3/fibonacci.py ",
-				"     gcc -o helloworld examples/c/helloworld.c && ./helloworld",
-				"     objdump -d ./helloworld | less -M",
-				"     vim examples/c/helloworld.c",
-				"     curl --max-time 15 parrot.live  # requires networking",
-				"",
-				];
+			var text = ["",""];
 			return text;
 		},
 		getSharedArrayBufferMissingMessage: function ()
@@ -199,9 +172,9 @@
 			const text = [
 				"",
 				"",
-				color + "CheerpX could not start" + normal,
+				color + "ZVM could not start" + normal,
 				"",
-				"CheerpX depends on JavaScript's SharedArrayBuffer, that your browser",
+				"ZVM depends on JavaScript's SharedArrayBuffer, that your browser",
 				"     does not support.",
 				"",
 				"SharedArrayBuffer is currently enabled by default on recent",
@@ -218,9 +191,9 @@
 			const text = [
 				"",
 				"",
-				color + "CheerpX could not start" + normal,
+				color + "ZVM could not start" + normal,
 				"",
-				"CheerpX internal error message is:",
+				"ZVM internal error message is:",
 				error_message,
 				"",
 				"",
