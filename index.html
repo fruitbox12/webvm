@@ -151,7 +151,7 @@
 	const underline= "\x1b[94;4m";
 	const normal= "\x1b[0m";
 	var printOnTerm = {
-	getAsciiTitle: function ()
+		getAsciiTitle: function ()
 		{
 			var title = [
 				color + "                        __      __   _  __   ____  __       " + normal,
@@ -167,19 +167,19 @@
 			var text = [
 				"+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+",
 				"|                                                                             |",
-				"| ZapVM is a server-less runtime for liberating user data		       |",
-				"| 			                                                       |",
+				"| WebVM is a server-less virtual Linux environment running fully client-side  |",
+				"| in HTML5/WebAssembly.                                                       |",
 				"|                                                                             |",
-				"| ZapVM is powered by the CheerpX virtualization engine, which enables safe,  |",
+				"| WebVM is powered by the CheerpX virtualization engine, which enables safe,  |",
 				"| sandboxed client-side execution of x86 binaries on any browser.             |",
 				"|                                                                             |",
 				"| CheerpX includes an x86-to-WebAssembly JIT compiler, a virtual block-based  |",
 				"| file system, and a Linux syscall emulator.                                  |",
 				"|                                                                             |",
-				"| [NEW!] ZapVM now supports full TCP and UDP networking via Tailscale!        |",
+				"| [NEW!] WebVM now supports full TCP and UDP networking via Tailscale!        |",
 				"| Click on 'Tailscale Login' to enable it. Read the announcement:             |",
 				"|                                                                             |",
-				"| 									       |",
+				"| " + underline + "https://leaningtech.com/webvm-virtual-machine-with-networking-via-tailscale" + normal +" |",
 				"|                                                                             |",
 				"+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+",
 				"",
@@ -345,7 +345,7 @@
 	var script = document.createElement('script');
 	script.type = 'text/javascript';
 
-	var cxFile = "https://cheerpxdemos.leaningtech.com/publicdeploy/cx.js";
+	var cxFile = "https://cheerpxdemos.leaningtech.com/publicdeploy/CX_VERSION/cx.js";
 	script.src = cxFile;
 	script.addEventListener("load", runBash, false);
 
@@ -363,4 +363,3 @@
 </script>
   </body>
 </html>
-
